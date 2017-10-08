@@ -12,17 +12,7 @@
         android:padding="10dp"
         android:layout_height="match_parent" />
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
 
-        <ProgressBar
-            android:id="@+id/progressbar"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:visibility="gone"
-            android:layout_centerInParent="true" />
-        </RelativeLayout>
 
 
 
@@ -49,6 +39,20 @@
 
     </LinearLayout>
 
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

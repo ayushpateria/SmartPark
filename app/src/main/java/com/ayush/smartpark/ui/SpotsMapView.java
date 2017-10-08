@@ -40,10 +40,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-/**
- * Created by ayush on 08/10/17.
- */
-
+// Map view for parking areas nearby. The overall structure follows the implementation in Android Maps Sample.
 public class SpotsMapView  extends BaseActivity
         implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,

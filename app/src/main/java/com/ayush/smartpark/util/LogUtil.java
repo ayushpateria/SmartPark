@@ -3,8 +3,9 @@ package com.ayush.smartpark.util;
 import android.util.Log;
 
 /**
- * Created by Andreas Schrade on 14.12.2015.
+ * Created by ayush on 07/10/17.
  */
+
 public class LogUtil {
     private static final String LOG_PREFIX = "android_template";
 

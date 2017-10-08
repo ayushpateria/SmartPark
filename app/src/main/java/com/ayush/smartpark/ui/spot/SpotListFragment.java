@@ -19,21 +19,19 @@ import com.bumptech.glide.Glide;
 import com.ayush.smartpark.R;
 import com.ayush.smartpark.model.Spot;
 
+/**
+ * Created by ayush on 07/10/17.
+ */
 public class SpotListFragment extends ListFragment {
 
     private Callback callback = dummyCallback;
     private MyListAdapter myAdapter;
 
-    /**
-     * A callback interface. Called whenever a item has been selected.
-     */
+
     public interface Callback {
         void onItemSelected(String id);
     }
 
-    /**
-     * A dummy no-op implementation of the Callback interface. Only used when no active Activity is present.
-     */
     private static final Callback dummyCallback = new Callback() {
         @Override
         public void onItemSelected(String id) {
@@ -55,10 +53,7 @@ public class SpotListFragment extends ListFragment {
         callback.onItemSelected(Spot.ITEMS.get(position).id);
     }
 
-    /**
-     * onAttach(Context) is not called on pre API 23 versions of Android.
-     * onAttach(Activity) is deprecated but still necessary on older devices.
-     */
+
     @TargetApi(23)
     @Override
     public void onAttach(Context context) {
@@ -66,9 +61,7 @@ public class SpotListFragment extends ListFragment {
         onAttachToContext(context);
     }
 
-    /**
-     * Deprecated on API 23 but still necessary for pre API 23 devices.
-     */
+
     @SuppressWarnings("deprecation")
     @Override
     public void onAttach(Activity activity) {
@@ -78,9 +71,7 @@ public class SpotListFragment extends ListFragment {
         }
     }
 
-    /**
-     * Called when the fragment attaches to the context
-     */
+
     protected void onAttachToContext(Context context) {
         if (!(context instanceof Callback)) {
             throw new IllegalStateException("Activity must implement callback interface.");

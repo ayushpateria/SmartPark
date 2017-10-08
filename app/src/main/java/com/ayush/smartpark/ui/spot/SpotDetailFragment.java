@@ -25,21 +25,15 @@ import com.ayush.smartpark.model.Spot;
 import com.ayush.smartpark.ui.base.BaseActivity;
 import com.ayush.smartpark.ui.base.BaseFragment;
 
+
 /**
- * Shows the spot detail page.
- *
- * Created by Andreas Schrade on 14.12.2015.
+ * Created by ayush on 07/10/17.
  */
 public class SpotDetailFragment extends BaseFragment {
 
-    /**
-     * The argument represents the dummy item ID of this fragment.
-     */
     public static final String ARG_ITEM_ID = "item_id";
 
-    /**
-     * The dummy content of this fragment.
-     */
+
     private Spot.SpotItem mSpot;
 
     @Bind(R.id.details_address)
@@ -101,7 +95,7 @@ public class SpotDetailFragment extends BaseFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_settings:
-                // your logic
+
                 return true;
         }
         return super.onOptionsItemSelected(item);

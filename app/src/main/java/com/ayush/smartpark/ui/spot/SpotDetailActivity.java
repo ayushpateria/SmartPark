@@ -5,10 +5,9 @@ import android.os.Bundle;
 import com.ayush.smartpark.R;
 import com.ayush.smartpark.ui.base.BaseActivity;
 
-/**
- * Simple wrapper for {@link SpotDetailFragment}
- * This wrapper is only used in single pan mode (= on smartphones)
 
+/**
+ * Created by ayush on 07/10/17.
  */
 public class SpotDetailActivity extends BaseActivity {
 

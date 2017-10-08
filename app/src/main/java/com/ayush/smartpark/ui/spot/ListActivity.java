@@ -38,6 +38,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
+/**
+ * Created by ayush on 07/10/17.
+ */
 
 public class ListActivity extends BaseActivity implements SpotListFragment.Callback {
 

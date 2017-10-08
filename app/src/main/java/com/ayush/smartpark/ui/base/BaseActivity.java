@@ -18,6 +18,9 @@ import static com.ayush.smartpark.util.LogUtil.logD;
 import static com.ayush.smartpark.util.LogUtil.makeLogTag;
 
 
+/**
+ * Created by ayush on 07/10/17.
+ */
 
 public abstract class BaseActivity extends AppCompatActivity {
     private static final String TAG = makeLogTag(BaseActivity.class);
