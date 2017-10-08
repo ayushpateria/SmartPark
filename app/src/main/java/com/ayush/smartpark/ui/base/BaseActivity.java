@@ -11,9 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.ayush.smartpark.R;
-import com.ayush.smartpark.ui.SettingsActivity;
 import com.ayush.smartpark.ui.RegisterParking;
-import com.ayush.smartpark.ui.quote.ListActivity;
+import com.ayush.smartpark.ui.spot.ListActivity;
 
 import static com.ayush.smartpark.util.LogUtil.logD;
 import static com.ayush.smartpark.util.LogUtil.makeLogTag;
@@ -106,9 +105,7 @@ public abstract class BaseActivity extends AppCompatActivity {
             case R.id.nav_reg:
                 startActivity(new Intent(this, RegisterParking.class));
                 break;
-            case R.id.nav_credits:
-                startActivity(new Intent(this, SettingsActivity.class));
-                break;
+
         }
     }
 

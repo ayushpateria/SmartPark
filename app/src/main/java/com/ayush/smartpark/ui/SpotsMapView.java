@@ -11,20 +11,18 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ayush.smartpark.R;
 import com.ayush.smartpark.model.Spot;
 import com.ayush.smartpark.ui.base.BaseActivity;
-import com.ayush.smartpark.ui.quote.SpotDetailActivity;
-import com.ayush.smartpark.ui.quote.SpotDetailFragment;
+import com.ayush.smartpark.ui.spot.SpotDetailActivity;
+import com.ayush.smartpark.ui.spot.SpotDetailFragment;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
@@ -170,10 +168,13 @@ public class SpotsMapView  extends BaseActivity
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
-        return true;
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                openDrawer();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
-
     /**
      * Manipulates the map when it's available.
      * This callback is triggered when the map is ready to be used.

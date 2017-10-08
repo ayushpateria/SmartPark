@@ -1,4 +1,4 @@
-package com.ayush.smartpark.ui.quote;
+package com.ayush.smartpark.ui.spot;
 import com.ayush.smartpark.json.JSONParser;
 import com.ayush.smartpark.model.Spot;
 import com.ayush.smartpark.ui.SpotsMapView;
@@ -72,7 +72,7 @@ public class ListActivity extends BaseActivity implements SpotListFragment.Callb
     /**
      * Called when an item has been selected
      *
-     * @param id the selected quote ID
+     * @param id the selected spot ID
      */
     @Override
     public void onItemSelected(String id) {

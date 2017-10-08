@@ -1,4 +1,4 @@
-package com.ayush.smartpark.ui.quote;
+package com.ayush.smartpark.ui.spot;
 
 import android.os.Bundle;
 

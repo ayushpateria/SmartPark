@@ -1,11 +1,10 @@
-package com.ayush.smartpark.ui.quote;
+package com.ayush.smartpark.ui.spot;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -27,7 +26,7 @@ import com.ayush.smartpark.ui.base.BaseActivity;
 import com.ayush.smartpark.ui.base.BaseFragment;
 
 /**
- * Shows the quote detail page.
+ * Shows the spot detail page.
  *
  * Created by Andreas Schrade on 14.12.2015.
  */
