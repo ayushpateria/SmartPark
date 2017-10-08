@@ -93,7 +93,7 @@ public class ListActivity extends BaseActivity implements SpotListFragment.Callb
         // Get the textview of the title
         customTitle = (TextView) customView.findViewById(R.id.actionbarTitle);
 
-        String street = Userdata.getStreet(this, "SmartPark");
+        String street = Userdata.getStreet(getApplicationContext(), "SmartPark");
         customTitle.setText(street);
 
         // Change the font family (optional)
@@ -127,11 +127,11 @@ public class ListActivity extends BaseActivity implements SpotListFragment.Callb
                 userLat = selectedPlace.getLatLng().latitude;
                 userLon = selectedPlace.getLatLng().longitude;
                 String userLoc = "" + userLat + "," + userLon;
-                Userdata.setLongLat(this, userLoc);
+                Userdata.setLongLat(getApplicationContext(), userLoc);
                 String st = selectedPlace.getAddress().toString();
                 st = st.subSequence(0, Math.min(st.length(), 15)).toString() + "..";
                 customTitle.setText(st);
-                Userdata.setStreet(this, st);
+                Userdata.setStreet(getApplicationContext(), st);
                 Log.d("St", st);
                 fetchData();
             }
@@ -149,13 +149,13 @@ public class ListActivity extends BaseActivity implements SpotListFragment.Callb
                     userLat = gps.getLatitude();
                     userLon = gps.getLongitude();
                     userLoc = "" + userLat + "," + userLon;
-                    Userdata.setLongLat(this, userLoc);
+                    Userdata.setLongLat(getApplicationContext(), userLoc);
                     // Get the place name and set it in title and pref.
 
                     String st = getStreet(userLat, userLon).toString();
                     st = st.subSequence(0, Math.min(st.length(), 15)).toString() + "..";
                     customTitle.setText(st);
-                    Userdata.setStreet(this, st);
+                    Userdata.setStreet(getApplicationContext(), st);
 
                 }
             }
@@ -183,7 +183,7 @@ public class ListActivity extends BaseActivity implements SpotListFragment.Callb
         try {
             addresses = geocoder.getFromLocation(userLat, userLon, 1); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
             address = addresses.get(0).getAddressLine(0);
-            Userdata.setStreet(this, address);
+            Userdata.setStreet(getApplicationContext(), address);
             Log.d("Street", address);
         } catch (IOException e) {
             e.printStackTrace();

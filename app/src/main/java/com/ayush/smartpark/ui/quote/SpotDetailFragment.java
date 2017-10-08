@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -119,8 +120,8 @@ public class SpotDetailFragment extends BaseFragment {
 
     @OnClick(R.id.details_directions)
     public void openDirections(View view) {
-        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, 
-                Uri.parse("http://maps.google.com/maps?saddr="+ Userdata.getLongLat(getActivity(), "")+"&daddr="+mSpot.lat+","+mSpot.lon));
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
+                Uri.parse("http://maps.google.com/maps?saddr="+ Userdata.getLongLat(this.getActivity().getApplicationContext(), "")+"&daddr="+mSpot.lat+","+mSpot.lon));
         startActivity(intent);
     }
 }
