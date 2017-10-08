@@ -68,7 +68,7 @@ public class SpotDetailFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflateAndBind(inflater, container, R.layout.fragment_article_detail);
+        View rootView = inflateAndBind(inflater, container, R.layout.fragment_spot_detail);
 
         if (!((BaseActivity) getActivity()).providesActivityToolbar()) {
             // No Toolbar present. Set include_toolbar:
